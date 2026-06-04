@@ -27,6 +27,8 @@ app = Flask(__name__, static_folder='Static', template_folder='Templates')
 UPLOAD_FOLDER = "Static/uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 # Load model
 model = tf.keras.models.load_model("model.h5")
 
