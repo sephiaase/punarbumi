@@ -5,11 +5,19 @@ import os
 import os
 import gdown
 
+import gdown
+import os
+
 MODEL_PATH = "model.h5"
 
 if not os.path.exists(MODEL_PATH):
-    url = "https://drive.google.com/uc?id=1KX9azzxejuryVzpxm0883Fs2S_8HwtG9"
-    gdown.download(url, MODEL_PATH, quiet=False)
+    gdown.download(
+        "https://drive.google.com/uc?id=1KX9azzxejuryVzpxm0883Fs2S_8HwtG9",
+        MODEL_PATH,
+        quiet=False
+    )
+
+model = tf.keras.models.load_model(MODEL_PATH)
 
 from tensorflow.keras.preprocessing import image
 from werkzeug.utils import secure_filename
