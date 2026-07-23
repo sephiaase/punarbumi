@@ -34,7 +34,7 @@ model = tf.keras.models.load_model("model.h5")
 
 # Label kelas
 class_names = [
-    "botol_bir",
+    "botol_kaca",
     "botol_plastik",
     "buku",
     "kaleng",
