@@ -12,7 +12,7 @@ MODEL_PATH = "model.h5"
 
 if not os.path.exists(MODEL_PATH):
     gdown.download(
-        "https://drive.google.com/uc?id=1KX9azzxejuryVzpxm0883Fs2S_8HwtG9",
+        "https://drive.google.com/uc?id=1fKTOr0qBxxM2enbtGiTjjLeBlmkfKgbq",
         MODEL_PATH,
         quiet=False
     )
